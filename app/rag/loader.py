@@ -7,6 +7,7 @@ def load_documents(path):
     documents = loader.load()
     splitter= RecursiveCharacterTextSplitter(chunk_size = 500,chunk_overlap=100)
     chunks=splitter.split_documents(documents)
+    print("documents has been loaded successfully")
     return chunks 
 
 if __name__=="__main__":
